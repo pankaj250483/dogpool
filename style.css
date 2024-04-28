@@ -71,6 +71,12 @@ h1,h2,h3,h4,h5,h6
 {
     box-shadow: 5px 5px 10px white, -5px -5px 10px white;
 }
+
+a:link,a:hover,a:active,a:visited
+{
+    color: white;
+    text-decoration: none;
+}
 .bg2
 {
     background-image: url(images/photo_30_2024-04-27_03-12-43.jpg);
@@ -90,17 +96,7 @@ h1,h2,h3,h4,h5,h6
     transform: translateY(2px);
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-    z-index: 10; /* Ensure the overlay is above the main content */
-}
-
-@media only screen and (max-width: 600px) 
+@media only screen and (max-width: 1025px) 
 {
     .ff-hero
     {
@@ -116,5 +112,14 @@ h1,h2,h3,h4,h5,h6
     {
         width: 100% !important;
     }
+
+    .w-25
+    {
+        width: 75% !important;
+    }
   
+    .social, .btn
+    {
+        margin: 10px !important;
+    }
   }
