@@ -10,7 +10,7 @@
 
 html
 {
-    background-color: #c2e4f0;
+    background-color: rgba(32, 29, 29, 0.9);
 }
 body 
 {
@@ -59,7 +59,7 @@ h1,h2,h3,h4,h5,h6
 }  
 .bg1
 {
-    background-image: url(images/photo_39_2024-04-27_03-12-43.jpg);
+    background-image: url(images/photo-39-dark.jpg);
     background-size: cover;
     background-position: center center;
     min-height: 100vh;
