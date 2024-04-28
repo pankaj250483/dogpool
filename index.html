@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>$DOGPOOL</title>
+    <title>DOGPOOL</title>
     <link rel="icon" type="image/x-icon" href="/images/fav.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -11,7 +11,7 @@
 
 <div class="container-fluid p-5 align-items-center justify-content-center bg1">
     <div class="row justify-content-center mt-5">
-        <div class="col-md-6 text-center mt-5">
+        <div class="col-md-6 text-center">
             <img class="w-25 shadow shadow-lg rounded-circle border border-5" src="images/photo_28_2024-04-27_03-12-43.jpg"
             data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">            
             <img class="w-25 shadow shadow-lg rounded-circle d-none d-lg-inline border border-5" src="images/photo_38_2024-04-27_03-12-43.jpg"
@@ -20,9 +20,8 @@
             data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">            
         </div>
         <div class="col-md-8 ">
-            <h1 class="text-center display-1 ff-hero mb-5 py-5" style="text-shadow: 24px 24px 80px rgb(230, 229, 131) !important;">DogPool</h1>
-            <div class="justify-content-around my-5 text-center">
-                <button class="btn btn-warning btn-lg px-5 py-2" onclick="copyLink(this)">Copy CA:xxx</button>
+            <h1 class="text-center display-1 ff-hero py-4" style="text-shadow: 24px 24px 80px rgb(230, 229, 131) !important;">DogPool</h1>
+            <div class="justify-content-around text-center">
                 <a href="#" target="blank">
                 <button class="btn btn-warning btn-lg px-5 py-2" data-aos="zoom-out-down"> TELEGRAM </button>
                 </a>
@@ -30,6 +29,11 @@
                 <button class="btn btn-warning btn-lg px-5 py-2" data-aos="zoom-out-down"> TWITTER X </button>
                 </a>
             </div>
+            <div class="justify-content-around my-2 mt-5 text-center">
+                <p class="text-light" id="contractAddress">CA: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>
+                <button class="btn btn-warning btn-lg px-5 py-2" id="pressedButton" onclick="copyLink(this)">Copy </button>
+            </div>
+
         </div>
 </div>
 </div>
@@ -162,15 +166,24 @@
 
     function copyLink() {
 	/* Get the text field */
-	// var copyText = document.getElementById("contractAddress").innerHTML;
+	var copyText = document.getElementById("contractAddress").innerHTML;
 
 	/* Copy the text inside the text field */
-	// navigator.clipboard.writeText(copyText.split("CA: ")[1]);
-    navigator.clipboard.writeText("xxx");
-    alert("CA: xxx copied to Clipboard.");
-	/* Alert the copied text */
-	// alert("Copied the text: " + copyText.value);
+	navigator.clipboard.writeText(copyText.split("CA: ")[1]);
+    // navigator.clipboard.writeText("xxx");
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var pressedButton = document.getElementById('pressedButton');
+    pressedButton.addEventListener('click', function() {
+      this.classList.add('btn-pressed');
+      this.innerHTML="Copied !!!";
+      setTimeout(() => {
+        this.classList.remove('btn-pressed');
+        this.innerHTML="Copy";
+      }, 3000);
+    });
+  });
 
 
 </script>

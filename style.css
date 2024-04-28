@@ -74,6 +74,16 @@ h1,h2,h3,h4,h5,h6
     background-attachment: fixed;
 }
 
+.bg-primary
+{
+    background-color: #51200b !important;
+}
+
+.btn-pressed {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
 .overlay {
     position: absolute;
     top: 0;
